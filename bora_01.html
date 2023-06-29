@@ -1,0 +1,118 @@
+<label>
+  <input type="radio" name="filter" value="all" checked>
+  全ての部門
+</label>
+<label>
+  <input type="radio" name="filter" value="yoga">
+  地域安全パトロール部門
+</label>
+<label>
+  <input type="radio" name="filter" value="art">
+  福祉部門
+</label>
+<label>
+  <input type="radio" name="filter" value="music">
+  環境部門
+</label>
+<label>
+  <input type="radio" name="filter" value="ct">
+  子供部門
+</label>
+<label>
+  <input type="radio" name="filter" value="at">
+  災害部門
+</label>
+
+<ul id="activity-list">
+  <li class="yoga" data-date="2023-07-01">
+    <a class="link" href="#">Activity 1</a>
+  </li>
+  <li class="art" data-date="2023-07-02">
+    <a class="link" href="#">Activity 2</a>
+  </li>
+  <li class="music" data-date="2023-07-03">
+    <a class="link" href="#">Activity 3</a>
+  </li>
+  <!-- 他のアクティビティのリスト -->
+</ul>
+
+<script>
+  // ラジオボタンの変更イベントを監視し、フィルタリングを実行
+  const filterRadios = document.querySelectorAll('input[name="filter"]');
+  const activityList = document.getElementById('activity-list');
+
+  filterRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      const selectedValue = document.querySelector('input[name="filter"]:checked').value;
+
+      activityList.querySelectorAll('li').forEach(li => {
+        if (selectedValue === 'all' || li.classList.contains(selectedValue)) {
+          li.style.display = 'block';
+        } else {
+          li.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  ul {
+    padding: 0;
+  }
+
+  ul li {
+    position: relative;
+    list-style-type: none;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    vertical-align: middle;
+    border-radius: 20px;
+    color: #fff;
+  }
+
+  ul li::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 1em;
+    height: 1em;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .yoga {
+    background: #ffcc00;
+  }
+
+  .art {
+    background: #00ccff;
+  }
+
+  .music {
+    background: #08e35c;
+  }
+  .at {
+    background: #d112b4;
+  }
+  .ct {
+    background: #ff8800;
+  }
+
+</style>
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+
