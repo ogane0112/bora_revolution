@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>レポート</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    @media print {
+    /* ここにカラープロファイルを埋め込む */
+    @import url('color-profile.icc');
+  }
+
+    body {
+      margin: 2cm;
+      font-family: Arial, sans-serif;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-radius: 10px;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .kankyo{
+      background-color: #c1f0c3;
+    }
+    .kodomo{
+      background-color: #eedbd0;
+    }
+
+    .hukusi {
+      background-color: #f08bc9;
+    }
+
+    .saigai {
+      background-color: #a9d2e7;
+    }
+
+    .tian {
+      background-color: #ede09e;
+    }
+
+    /* プリント時に非表示にするクラス */
+    .no-print {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img class="dis-1" src="活動予定表.png">
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>活動名</th>
+        <th>活動日</th>
+        <th>活動場所</th>
+        <th>活動時間</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="hukusi">
+          <label>マーケティング</label> <!-- 色: #f08bc9 -->
+        </td>
+        <td>John Doe</td>
+        <td>$10000</td>
+        <td>$10000</td>
+      </tr>
+      <tr >
+        <td class="saigai">
+          <label>開発</label> <!-- 色: #a9d2e7 -->
+        </td>
+        <td>Jane Doe</td>
+        <td>$12000</td>
+        <td>$12000</td>
+      </tr>
+      <tr>
+        <td class="tian">
+          <label>地域安全パトロール部門</label> <!-- 色: #ede09e -->
+        </td>
+        <td>Richard Roe</td>
+        <td>$8000</td>
+        <td>$8000</td>
+      </tr>
+      <tr>
+        <td class="kodomo">
+          <label>人事</label> <!-- 色: #eedbd0 -->
+        </td>
+        <td>Richard Roe</td>
+        <td>$8000</td>
+        <td>$8000</td>
+      </tr>
+      <tr>
+        <td class="kankyo">
+          <label>環境</label> <!-- 色: #c1f0c3 -->
+        </td>
+        <td>Richard Roe</td>
+        <td>$8000</td>
+        <td>$8000</td>
+      </tr>
+    
+    </tbody>
+  </table>
+  
+    <label class="kankyo">環境</label> <!-- 色: #c1f0c3 -->
+    <label class="hukusi">福祉</label>
+    <label class="tian">地域安全パトロール</label>
+    <label class="kodomo">子供</label>
+    <label class="saigai">災害</label>
+  
+</body>
+</html>
