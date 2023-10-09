@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+  <title>レポート</title>
+  <style>
+    .insta{
+      width: 1080px;
+      height:1080px;
+      overflow:hidden;
+    }
+    @media print {
+      /* ここにカラープロファイルを埋め込む */
+      @import url('color-profile.icc');
+    }
+
+    body {
+      margin: 2cm;
+      font-family: Arial, sans-serif;
+    }
+
+    div {
+      text-align: center;
+
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    table {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border-bottom: 1px solid #000; /* 横線のみを表示するために下の境界線を設定 */
+  padding: 5px; /* セルの内側の余白を指定（任意） */
+}
+
+/* テーブルの最初の行のセルだけ上の境界線を持つ */
+tr:first-child td, tr:first-child th {
+  border-top: 1px solid #000;
+}
+
+/* テーブルの最後の行のセルだけ下の境界線を持つ */
+tr:last-child td, tr:last-child th {
+  border-bottom: 1px solid #000;
+}
+
+
+    .kankyo {
+      background-color: #c1f0c3;
+    }
+
+    .kodomo {
+      background-color: #eedbd0;
+    }
+
+    .hukusi {
+      background-color: #f08bc9;
+    }
+
+    .saigai {
+      background-color: #a9d2e7;
+    }
+
+    .tian {
+      background-color: #ede09e;
+    }
+
+    /* プリント時に非表示にするクラス */
+    .no-print {
+      display: none;
+    }
+
+    /* スタイル改善 */
+    .label {
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      width: 100px; /* Add this */
+      height: 30px; /* Add this */
+      line-height: 100px; /* Add this */
+      text-align: center; /* Add this */
+      vertical-align: middle; /* Add this */
+      overflow: hidden; /* Add this */
+    
+    }
+
+    /* The remaining CSS classes... */
+ 
+    .kankyo-label {
+    background-color: #c1f0c3;
+    color: #006400;
+    
+    line-height: normal; /* Add this */
+    width: auto; /* Add this */
+    height: auto; /* Add this */
+    text-align: center;
+    display: flex;        /* flexboxを使って要素を中央揃えにする */
+  justify-content: center; /* 水平方向（横方向）の中央揃え */
+  align-items: center; 
+  }
+
+  .kodomo-label {
+    background-color: #eedbd0;
+    color: #8B4513;
+  
+    line-height: normal; /* Add this */
+    width: auto; /* Add this */
+    height: auto; /* Add this */
+    text-align: center;
+    display: flex;        /* flexboxを使って要素を中央揃えにする */
+  justify-content: center; /* 水平方向（横方向）の中央揃え */
+  align-items: center; 
+  }
+
+  .hukusi-label {
+    background-color: #f08bc9;
+    color: #800080;
+   
+    line-height: normal; /* Add this */
+    width: auto; /* Add this */
+    height: auto; /* Add this */
+    text-align: center;
+    display: flex;        /* flexboxを使って要素を中央揃えにする */
+  justify-content: center; /* 水平方向（横方向）の中央揃え */
+  align-items: center; 
+  }
+
+  .saigai-label {
+    background-color: #a9d2e7;
+    color: #191970;
+  
+    line-height: normal; /* Add this */
+    width: auto; /* Add this */
+    height: auto; /* Add this */
+    text-align: center;
+    display: flex;        /* flexboxを使って要素を中央揃えにする */
+  justify-content: center; /* 水平方向（横方向）の中央揃え */
+  align-items: center; 
+  }
+
+  .tian-label {
+    background-color: #ede09e;
+    color: #434302;
+    display: flex; /* Add this */
+    line-height: normal; /* Add this */
+    width: auto; /* Add this */
+    height: auto; /* Add this */
+    text-align: center;
+    display: flex;        /* flexboxを使って要素を中央揃えにする */
+  justify-content: center; /* 水平方向（横方向）の中央揃え */
+  align-items: center; 
+  }
+  p {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+</style> 
+</head>
+<div class ="insta">
+
+  <body>
+    <div>
+      <img  src="活動予定表.png" width="100%" height="200">
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>活 動 名</th>
+          <th>活 動 日</th>
+          <th>活 動 場 所</th>
+          <th>活 動 時 間</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="kodomo">
+            <label class="label kodomo-label">第4回活動報告会</label> <!-- 色: #f08bc9 -->
+          </td>
+          <td>10/4(水)</td>
+          <td>S509</td>
+          <td>12:30~13:00</td>
+        </tr>
+        <tr>
+          <td class="tian">
+            <label class="label tian-label">第10回防犯パトロール</label> <!-- 色: #a9d2e7 -->
+          </td>
+          <td>10/5(木)</td>
+          <td>8号館502</td>
+          <td>14:50~16:20</td>
+        </tr>
+        <tr >
+          <td class="kankyo">
+            <label class="label kankyo-label">第10回クリーンアップ大作戦</label> <!-- 色: #a9d2e7 -->
+          </td>
+          <td>10/5(木)</td>
+          <td>本部棟下</td>
+          <td>16:30~17:30</td>
+        </tr>
+        <tr>
+          <td class="tian">
+            <label class="label tian-label">第11回防犯パトロール</label> <!-- 色: #a9d2e7 -->
+          </td>
+          <td>10/16(月)</td>
+          <td>8号館502</td>
+          <td>14:50~16:20</td>
+        </tr>
+
+        <tr >
+          <td class="kankyo">
+            <label class="label kankyo-label">第11回クリーンアップ大作戦</label> <!-- 色: #a9d2e7 -->
+          </td>
+          <td>10/19(木)</td>
+          <td>本部棟下</td>
+          <td>12:30~13:10</td>
+        </tr>
+
+        <tr >
+          <td class="kankyo">
+            <label class="label kankyo-label">エコキャップ大作戦</label> <!-- 色: #a9d2e7 -->
+          </td>
+          <td>10/19(木)</td>
+          <td>8号館502</td>
+          <td>13:10~14:40</td>
+        </tr>
+        <tr>
+          <td class="tian">
+            <label class="label tian-label">第12回防犯パトロール</label> <!-- 色: #a9d2e7 -->
+          </td>
+          <td>10/27(金)</td>
+          <td>8号館502</td>
+          <td>14:50~16:20</td>
+        </tr>
+        
+        <tr>
+          <td class="tian">
+            <label class="label tian-label">第9,10,11回ふれあいあいさつ運動</label> <!-- 色: #ede09e -->
+          </td>
+          <td>10/10(火),10/26(木),10/30(月)</td>
+          <td>8号館502</td>
+          <td>14:05~15:00</td>
+        </tr>
+       
+        <tr>
+          <td class="kodomo">
+            <label class="label kodomo-label">第5回活動報告会</label> <!-- 色: #ede09e -->
+          </td>
+          <td>10/26(火)</td>
+          <td>S403</td>
+          <td>12:30~13:00</td>
+        </tr>
+        
+        
+        
+        
+       
+      </tbody>
+    </table>
+    <p>
+    <label class="label kankyo-label">環境</label> <!-- 色: #c1f0c3 -->
+    <label class="label hukusi-label">福祉</label>
+    <label class="label tian-label">地域安全パトロール</label>
+    <label class="label saigai-label">災害</label>
+    <label class="label kodomo-label">総務</label>
+
+    </p>
+  </body>
+</div>
+<button id="cp">caputure</button>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", async function() {
+  // 画像とテーブルの読み込みを待つ
+  const image = new Image();
+  image.src = '活動予定表.png';
+  await Promise.all([new Promise(resolve => image.onload = resolve), waitForTableLoad()]);
+
+  // Captureボタンの参照を取得
+  const captureButton = document.getElementById("cp");
+
+  // Captureボタンがクリックされたときのイベントハンドラ
+  captureButton.addEventListener("click", async function() {
+    const instaElement = document.querySelector(".insta");
+    const canvas = await html2canvas(instaElement, {
+      width: 1080,
+      height: 1080,
+      windowWidth: instaElement.scrollWidth,
+      windowHeight: instaElement.scrollHeight,
+      scrollY: 0,
+      useCORS: true,
+      backgroundColor: "#ffffff"  // 背景色を白に設定
+    });
+    const imgData = canvas.toDataURL("image/jpeg");
+    const link = document.createElement("a");
+    link.href = imgData;
+    link.download = "screenshot.jpeg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+});
+
+// テーブルが完全にロードされるまで待つ関数
+function waitForTableLoad() {
+  return new Promise(resolve => {
+    const checkTable = setInterval(() => {
+      const table = document.querySelector('.insta table');
+      if (table && table.querySelectorAll('tr').length > 1) {
+        clearInterval(checkTable);
+        resolve();
+      }
+    }, 100);
+  });
+}
+
+
+
+</script>
