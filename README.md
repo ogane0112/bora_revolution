@@ -20,3 +20,8 @@
   htmlを持ちいて前よりもお洒落な活動予定表を作成してみました～  
   
   もしこれよりもいい物が思いついたらぜひ送ってくれると幸いです！
+# 活動予定表webページ用
+<img width="619" alt="image" src="https://github.com/ogane0112/bora_revolution/assets/120627734/34f0872c-b3b4-4c7f-a01f-2b5782b50416">  
+
+webページ用の活動予定表も作ってみました！上の
+
